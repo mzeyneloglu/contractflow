@@ -1,0 +1,2 @@
+class GateFailure(Exception):
+    pass

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContractFlow</title>
+  <link rel="icon" href="/static/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/projects">
+        <img src="/static/logo.svg" alt="" width="36" height="36">
+        <span><b>ContractFlow</b><small>API · Kural · Oracle</small></span>
+      </a>
+      <label class="project-picker">
+        <span>Aktif proje</span>
+        <select id="project-select"></select>
+      </label>
+      <nav id="nav">
+        <a data-view="projects" href="#/projects"><svg viewBox="0 0 24 24"><path d="M4 5h7v6H4zM13 5h7v4h-7zM13 11h7v8h-7zM4 13h7v6H4z"/></svg>Projeler</a>
+        <a data-view="setup" data-needs-project><svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm9 4-2.1.6a7 7 0 0 1-.7 1.7l1 2-1.8 1.8-2-1a7 7 0 0 1-1.7.7L13 21h-2l-.6-2.1a7 7 0 0 1-1.7-.7l-2 1-1.8-1.8 1-2a7 7 0 0 1-.7-1.7L3 12v-2l2.1-.6a7 7 0 0 1 .7-1.7l-1-2L6.6 3.9l2 1a7 7 0 0 1 1.7-.7L11 2h2l.6 2.1a7 7 0 0 1 1.7.7l2-1 1.8 1.8-1 2a7 7 0 0 1 .7 1.7L21 10z"/></svg>Kurulum</a>
+        <a data-view="verify" data-needs-project><svg viewBox="0 0 24 24"><path d="M5 12l4 4L19 6"/><path d="M3 4h6M3 20h18"/></svg>Doğrulama</a>
+        <a data-view="history" data-needs-project><svg viewBox="0 0 24 24"><path d="M12 7v5l3 2"/><circle cx="12" cy="12" r="9"/></svg>Geçmiş</a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="dot"></span><span id="local-note">Tamamen yerel · Ollama</span>
+      </div>
+    </aside>
+    <main id="view" class="view"></main>
+  </div>
+  <div id="toasts" class="toasts"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

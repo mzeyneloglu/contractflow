@@ -1,0 +1,46 @@
+[project]
+name = "contractflow"
+version = "0.1.0"
+description = "Yerel multi-agent API, iş kuralı ve Oracle tutarlılık doğrulayıcısı"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.162.0",
+    "uvicorn[standard]==0.54.0",
+    "jinja2==3.1.6",
+    "python-multipart",
+    "httpx==0.28.1",
+    "pydantic==2.14.2",
+    "pydantic-settings==2.16.2",
+    "langgraph==1.2.18",
+    "langgraph-checkpoint-sqlite==3.1.2",
+    "langchain-core==1.7.2",
+    "langchain-ollama==1.1.0",
+    "ollama==0.6.3",
+    "chromadb==1.5.9",
+    "rank-bm25==0.2.2",
+    "sqlglot==30.25.0",
+    "oracledb==26.1.0",
+    "mcp==2.3.0",
+    "pypdf==6.21.4",
+    "keyring==25.7.0",
+    "cryptography==50.0.2",
+    "pyyaml==6.0.3",
+    "jsonschema==4.26.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "pytest-asyncio==1.4.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = ["ignore::DeprecationWarning"]
+markers = [
+    "ollama: gerçek yerel Ollama gerektirir",
+    "oracle: gerçek Oracle bağlantısı gerektirir",
+    "service: gerçek hedef API servisi gerektirir",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*", "oracle_mcp*"]

@@ -1,0 +1,161 @@
+{
+  "top_k": 4,
+  "hit_rate": 1.0,
+  "mrr": 0.893,
+  "cases": [
+    {
+      "question": "Hangi siparişler aktif sayılır?",
+      "required": "STATUS",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Aktif Sipariş Tanımı, satır 11-11)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Test Müşterileri, satır 27-27)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Kapsam, satır 7-7)"
+      ]
+    },
+    {
+      "question": "Silinmiş kayıtlar adede dahil mi?",
+      "required": "DELETED_AT",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar, satır 15-15)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayfalama, satır 31-35)"
+      ]
+    },
+    {
+      "question": "Soft delete edilmiş ama geri alınmış sipariş sayılır mı?",
+      "required": "RESTORED_AT",
+      "rank": 2,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar, satır 15-15)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Aktif Sipariş Tanımı, satır 11-11)"
+      ]
+    },
+    {
+      "question": "Sipariş adedi hangi alan üzerinden benzersiz sayılmalı?",
+      "required": "orderId",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Aktif Sipariş Tanımı, satır 11-11)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Test Müşterileri, satır 27-27)"
+      ]
+    },
+    {
+      "question": "JOIN sonrası tekrar eden satırlar nasıl ele alınır?",
+      "required": "tekilleştirilmelidir",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar, satır 15-15)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayfalama, satır 31-35)"
+      ]
+    },
+    {
+      "question": "Test müşterilerinin siparişleri hariç mi?",
+      "required": "CUSTOMER_TYPE",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Test Müşterileri, satır 27-27)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Aktif Sipariş Tanımı, satır 11-11)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Kapsam, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)"
+      ]
+    },
+    {
+      "question": "Toplam kayıt sayısı yanıtta hangi alanda?",
+      "required": "totalElements",
+      "rank": 2,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayfalama, satır 31-35)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar, satır 15-15)"
+      ]
+    },
+    {
+      "question": "page parametresi kaçtan başlıyor?",
+      "required": "sıfırdan",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayfalama, satır 31-35)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Kapsam, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Aktif Sipariş Tanımı, satır 11-11)"
+      ]
+    },
+    {
+      "question": "customerId filtresi hangi endpoint için geçerli?",
+      "required": "customerId",
+      "rank": 1,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Kapsam, satır 7-7)",
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Tenant Ayrımı, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayfalama, satır 31-35)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Test Müşterileri, satır 27-27)"
+      ]
+    },
+    {
+      "question": "Tenant filtresi karşılaştırmada nasıl uygulanmalı?",
+      "required": "TENANT_ID",
+      "rank": 1,
+      "top": [
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Tenant Ayrımı, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Test Müşterileri, satır 27-27)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Kapsam, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)"
+      ]
+    },
+    {
+      "question": "Arşiv tabloları sayımda kullanılır mı?",
+      "required": "_ARCH",
+      "rank": 1,
+      "top": [
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Arşiv Tabloları, satır 15-15)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Tenant Ayrımı, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)"
+      ]
+    },
+    {
+      "question": "Dokümanlar çelişirse hangisi öncelikli?",
+      "required": "önceliklidir",
+      "rank": 1,
+      "top": [
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Kaynak Önceliği, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ), satır 3-3)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ), satır 3-3)"
+      ]
+    },
+    {
+      "question": "Tarih filtresinde hangi saat dilimi kullanılır?",
+      "required": "Europe/Istanbul",
+      "rank": 1,
+      "top": [
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Tarih ve Saat Dilimi, satır 11-11)",
+        "genel_veri_politikasi.md (Genel Veri Politikası (SENTETİK TEST BELGESİ) > Tenant Ayrımı, satır 7-7)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar, satır 15-15)"
+      ]
+    },
+    {
+      "question": "İptal durumundaki kayıtlar aktif mi?",
+      "required": "iptal",
+      "rank": 2,
+      "top": [
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar > İstisna: Arşivden Geri Alınanlar, satır 19-19)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Aktif Sipariş Tanımı, satır 11-11)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Silinmiş Kayıtlar, satır 15-15)",
+        "siparis_servisi_kurallari.md (Sipariş Servisi İş Kuralları (SENTETİK TEST BELGESİ) > Sayma Birimi, satır 23-23)"
+      ]
+    }
+  ]
+}
