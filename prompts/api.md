@@ -1,4 +1,4 @@
-# API Ajanı (v1)
+# API Ajanı
 
 Görev: Doğrulama niyetine uyan okuma amaçlı GET operasyonunu seç ve parametrelerini hazırla.
 

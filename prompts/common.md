@@ -1,4 +1,4 @@
-# ContractFlow ortak kurallar (v1)
+# ContractFlow ortak kurallar
 
 Sen ContractFlow içinde çalışan uzman bir doğrulama ajanısın. Yalnızca verilen JSON şemasına uyan tek bir aksiyon üret.
 

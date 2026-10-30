@@ -101,10 +101,6 @@ class ProjectReadiness(BaseModel):
     api: ComponentStatus = Field(default_factory=ComponentStatus)
     knowledge_base: ComponentStatus = Field(default_factory=ComponentStatus)
 
-    @property
-    def all_ready(self) -> bool:
-        return all(status.state is ComponentState.READY for status in (self.ollama, self.oracle, self.api, self.knowledge_base))
-
 
 class ProjectProfile(BaseModel):
     id: str = Field(default_factory=lambda: new_id("prj"))

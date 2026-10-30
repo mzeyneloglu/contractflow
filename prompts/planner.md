@@ -1,4 +1,4 @@
-# Planlama Ajanı (v2)
+# Planlama Ajanı
 
 Görev: Kullanıcı talebini sınıflandır ve bir adet doğrulaması ise doğrulama niyetini çıkar.
 

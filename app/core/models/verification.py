@@ -39,9 +39,6 @@ class BusinessRuleBundle(BaseModel):
     unresolved: list[str] = Field(default_factory=list)
     conflicts: list[str] = Field(default_factory=list)
 
-    def all_sources(self) -> list[SourceReference]:
-        return [source for rule in self.rules for source in rule.sources]
-
 
 class JoinType(StrEnum):
     INNER = "INNER"
@@ -53,9 +50,6 @@ class JoinType(StrEnum):
 class ColumnRef(BaseModel):
     table_alias: str
     column: str
-
-    def render(self) -> str:
-        return f"{self.table_alias}.{self.column}"
 
 
 class JoinSpec(BaseModel):

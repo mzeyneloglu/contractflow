@@ -131,7 +131,7 @@ flowchart LR
     R --> E["@Entity · @Table · @Column · @SQLRestriction"]
 ```
 
-Derleyici gerektirmez, build aracından bağımsızdır; repoya özel ad içermez. Koddan çıkan her tablo ve kolon MCP ile gerçek şemada doğrulanır. Bilinmeyen kalıplar için Oracle ajanının `search_code` ve `read_code` araçları vardır.
+Derleyici gerektirmez, build aracından bağımsızdır; repoya özel ad içermez. Koddan çıkan her tablo ve kolon MCP ile gerçek şemada doğrulanır. Kodun çözemediği dinamik kalıplarda servisin gerçek SQL'i çalışma anında (V$SQL, SQL logu, OpenTelemetry) yakalanır.
 
 ## Çalışma anı SQL yakalama
 

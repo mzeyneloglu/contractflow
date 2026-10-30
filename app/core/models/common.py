@@ -2,8 +2,6 @@ from datetime import UTC, datetime
 from enum import StrEnum
 from uuid import uuid4
 
-from pydantic import BaseModel, ConfigDict
-
 
 def utc_now() -> datetime:
     return datetime.now(UTC)
@@ -11,10 +9,6 @@ def utc_now() -> datetime:
 
 def new_id(prefix: str) -> str:
     return f"{prefix}_{uuid4().hex[:16]}"
-
-
-class StrictModel(BaseModel):
-    model_config = ConfigDict(extra="forbid")
 
 
 class RunStatus(StrEnum):

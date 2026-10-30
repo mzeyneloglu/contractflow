@@ -1,4 +1,4 @@
-# İş Kuralı Ajanı (v1)
+# İş Kuralı Ajanı
 
 Görev: Doğrulanacak kaynak için adet hesabını etkileyen iş kurallarını, istisnaları ve kapsam koşullarını belgelerden bul.
 

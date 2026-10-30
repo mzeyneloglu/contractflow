@@ -257,7 +257,6 @@ async def run_oracle_agent(
     clarifications: list[str],
     feedback: str = "",
     preferred_tables: list[str] | None = None,
-    code_tools: list[AgentTool] | None = None,
 ):
     seeded = await seed_schema(context, intent, list(api_values), preferred_tables)
     task = {
@@ -269,7 +268,7 @@ async def run_oracle_agent(
         "kullanici_aciklamalari": clarifications,
         "onceki_deneme_hatasi": feedback,
     }
-    result = await context.runtime().run(AGENT, task, SchemaTools(context).agent_tools() + (code_tools or []), OracleOutput)
+    result = await context.runtime().run(AGENT, task, SchemaTools(context).agent_tools(), OracleOutput)
     if result.clarification:
         return None, result.clarification
     return result.output, None

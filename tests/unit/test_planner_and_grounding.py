@@ -1,7 +1,5 @@
 import json
 
-import pytest
-
 from app.agents.grounding import catalog_suggestions, ground_options, schema_vocabulary
 from app.agents.roles.planner import run_planner
 from app.agents.runtime import ModelBudget

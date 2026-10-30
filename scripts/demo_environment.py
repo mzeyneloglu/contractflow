@@ -58,6 +58,13 @@ def seed_memory(container, project: ProjectProfile) -> None:
             container.mappings.save(project.id, remembered_mapping(operation_id), catalog.content_hash)
 
 
+def display_path(path: Path) -> str:
+    try:
+        return path.resolve().relative_to(Path.cwd()).as_posix()
+    except ValueError:
+        return str(path)
+
+
 def prepare(data_dir: Path, service_port: int) -> tuple[Settings, Path]:
     settings = Settings(data_dir=data_dir / "data", secret_backend="file", oracle_mcp_module="tests.support.sim_oracle_server")
     container = build_container(settings)
@@ -68,10 +75,10 @@ def prepare(data_dir: Path, service_port: int) -> tuple[Settings, Path]:
         return settings, database
     create_database(database)
     repository = write_demo_repository(data_dir / "demo-repo")
-    project = ProjectProfile(name=DEMO_PROJECT, environment="demo", documents_optional=False, code_paths=[str(repository)])
+    project = ProjectProfile(name=DEMO_PROJECT, environment="demo", documents_optional=False, code_paths=[display_path(repository)])
     project.oracle = OracleConnectionProfile(
         host="demo-oracle",
-        service_name=str(database),
+        service_name=database.stem,
         username="DEMO_READER",
         password_ref=container.secrets.put(secret_key(project.id, "oracle_password"), "demo"),
         schema_allowlist=["APP"],

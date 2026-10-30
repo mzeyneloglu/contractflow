@@ -200,4 +200,6 @@ def openapi_document() -> bytes:
 
 
 def simulation_db_path() -> Path:
-    return Path(OracleServerSettings.from_environment().service_name)
+    settings = OracleServerSettings.from_environment()
+    direct = Path(settings.service_name)
+    return direct if direct.is_file() else settings.secrets_dir.resolve().parent.parent / f"{settings.service_name}.sqlite3"

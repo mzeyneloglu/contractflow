@@ -1,4 +1,4 @@
-# Sonuç Analiz Ajanı (v1)
+# Sonuç Analiz Ajanı
 
 Görev: Sistem tarafından deterministik olarak hesaplanmış assertion sonuçlarını kanıtlarıyla kısa ve anlaşılır biçimde açıkla.
 

@@ -2,10 +2,12 @@
 
 <h1 align="center">ContractFlow</h1>
 
-<p align="center"><b>Servisinizin döndürdüğü veri, iş kuralının söylediğiyle ve veritabanındaki gerçekle tutarlı mı?</b><br>
-Doğal dille yazılan bir beklentiyi; analist belgeleri, OpenAPI sözleşmesi, servisin kaynak kodu, gerçek API yanıtı ve Oracle verisi üzerinden doğrulayan, <b>tamamen yerel</b> çalışan multi-agent QA aracı.</p>
+<p align="center"><b>Java + Spring Boot servisinizin döndürdüğü veri, iş kuralının söylediğiyle ve Oracle'daki gerçekle tutarlı mı?</b><br>
+Java / Spring Boot ile yazılmış REST servisleri için; doğal dille yazılan bir beklentiyi analist belgeleri, OpenAPI (Swagger) sözleşmesi, servisin Java kaynak kodu, gerçek API yanıtı ve Oracle verisi üzerinden doğrulayan, <b>tamamen yerel</b> çalışan multi-agent QA aracı.</p>
 
-<p align="center">Python · LangGraph · Ollama (gemma3:4b + qwen3-embedding) · MCP · Oracle · FastAPI</p>
+<p align="center"><img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" alt="Spring Boot"> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIj48ZWxsaXBzZSBjeD0iMTIiIGN5PSI1IiByeD0iOCIgcnk9IjMiLz48cGF0aCBkPSJNNCA1djE0YzAgMS43IDMuNiAzIDggM3M4LTEuMyA4LTNWNSIvPjxwYXRoIGQ9Ik00IDEyYzAgMS43IDMuNiAzIDggM3M4LTEuMyA4LTMiLz48L3N2Zz4%3D" alt="Oracle"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangGraph"> <img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white" alt="Ollama"> <img src="https://img.shields.io/badge/MCP-5A45FF?style=for-the-badge&logo=modelcontextprotocol&logoColor=white" alt="MCP"> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"></p>
+
+<p align="center"><sub>Hedef: Java · Spring Boot (Spring MVC / Spring Data JPA / Hibernate / MyBatis / JDBC) · Oracle — Platform: Python · LangGraph · Ollama (gemma3:4b + qwen3-embedding:0.6b) · MCP · FastAPI</sub></p>
 
 ---
 
