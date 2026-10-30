@@ -100,31 +100,13 @@ Servis kendi sorgusunu doğru döndürüyor, ancak sorgu "silinmiş kayıtlar sa
 
 ## 4. Mimari
 
-```mermaid
-flowchart TB
-    subgraph UI["Tek sayfa Türkçe arayüz"]
-        P[Projeler] --- K[Kurulum] --- D[Doğrulama<br/>canlı ajan hattı · SSE] --- G[Geçmiş / Rapor]
-    end
-    UI <-->|REST + Server-Sent Events| API[FastAPI]
-    API --> RM[RunManager<br/>arka plan iş parçacığı]
-    RM --> LG
+<p align="center"><img src="docs/diagrams/architecture.svg" alt="ContractFlow mimarisi: kullanıcı arayüzü, LangGraph orkestratörü, beş LLM ajanı, deterministik çekirdek, MCP/RAG/OpenAPI/HTTP/SQL izi araçları ve Java · Spring Boot · Oracle hedef sistemleri" width="100%"></p>
 
-    subgraph LG["LangGraph durum makinesi · AsyncSqliteSaver checkpoint"]
-        direction LR
-        PF[Ön kontrol] --> PL[Planlama] --> BR[İş Kuralı] --> AP[API] --> CD[Kod analizi] --> OR[Oracle] --> GT{Onay} --> EX[Yürütme] --> CM[Karşılaştırma] --> AN[Analiz]
-    end
+### Ajanların ReAct döngüsü
 
-    BR -->|search_query / get_section| RAG[(Yerel RAG<br/>Chroma + BM25 + RRF)]
-    AP -->|search / describe_operation| CAT[OpenAPI kataloğu]
-    CD -->|endpoint → servis → SQL| CODE[(Servis kaynak kodu)]
-    OR -->|stdio MCP| MCP[oracle_mcp<br/>SELECT-only]
-    EX -->|tüm sayfalar + traceparent| SVC[Hedef Spring Boot servisi]
-    EX -->|execute_select · recent_service_sql| MCP
-    SVC -.->|OTLP JSON| OTEL[/v1/traces alıcısı/]
-    SVC -.->|SQL logu| LOG[(Korelasyonlu log)]
-    MCP --> DB[(Oracle)]
-    OLL[Yerel Ollama<br/>gemma3:4b · qwen3-embedding:0.6b] -.-> PL & BR & AP & OR & AN
-```
+Her ajan "düşün → hareket et → gözlemle" döngüsüyle çalışır. Model native tool-calling'e güvenilmeden JSON-schema ile kısıtlanır; her aksiyon Pydantic ile doğrulanır ve yalnızca izinli araç bir dispatcher üzerinden çağrılır. Döngü ya `final` ile deterministik kapıya ya da `need_clarification` ile insan onayına çıkar.
+
+<p align="center"><img src="docs/diagrams/react-loop.svg" alt="ReAct döngüsü: görev bağlamı, düşünce, aksiyon, araç, gözlem; final ve need_clarification çıkışları; korkuluklar" width="100%"></p>
 
 **Akış:**
 

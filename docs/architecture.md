@@ -2,34 +2,9 @@
 
 ## Genel akış
 
-```mermaid
-flowchart TD
-    UI[Türkçe web arayüzü<br/>FastAPI + Jinja2] --> APP[FastAPI uygulaması]
-    APP --> SETUP[Profil, gizli bilgi deposu,<br/>dosya yükleme, indeksleme]
-    SETUP --> CATALOG[OpenAPI kataloğu<br/>Swagger 2.0 / OAS 3.0 / 3.1]
-    SETUP --> RAG[(Yerel RAG<br/>Chroma + BM25 + RRF)]
-    APP --> RUNNER[RunManager<br/>arka plan iş parçacığı]
-    RUNNER --> GRAPH[LangGraph StateGraph<br/>AsyncSqliteSaver checkpoint]
-    GRAPH --> PRE[Ön kontrol]
-    PRE --> P[Planlama Ajanı]
-    P --> B[İş Kuralı Ajanı]
-    B --> RAG
-    B --> A[API Ajanı]
-    A --> GATE1{API plan kapısı}
-    GATE1 --> D[Oracle Ajanı]
-    D --> MCP[oracle_mcp<br/>stdio, SELECT-only]
-    D --> GATE2{Eşleştirme kapısı<br/>+ kullanıcı onayı}
-    GATE2 --> EXEC[Paralel yürütme]
-    EXEC --> HTTP[HTTP Executor<br/>tüm sayfalar, benzersiz ID]
-    HTTP --> TARGET[Hedef Spring Boot servisi]
-    EXEC --> MCP
-    MCP --> DB[(Oracle)]
-    EXEC --> COMPARE[Deterministik karşılaştırma<br/>3 bağımsız assertion]
-    COMPARE --> R[Sonuç Analiz Ajanı]
-    R --> REPORT[Kaynaklı rapor<br/>JSON + Markdown]
-    OLLAMA[Yerel Ollama<br/>gemma3:4b + qwen3-embedding:0.6b] -.-> P & B & A & D & R
-    OLLAMA -.-> RAG
-```
+![ContractFlow mimarisi](diagrams/architecture.svg)
+
+![ReAct döngüsü](diagrams/react-loop.svg)
 
 ## Neden agent?
 

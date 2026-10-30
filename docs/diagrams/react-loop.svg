@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="ContractFlow ajanlarının ReAct döngüsü">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1220"/>
+      <stop offset="1" stop-color="#121a2a"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8b8ef8"/>
+    </marker>
+    <marker id="arrow-ok" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#3ddc97"/>
+    </marker>
+    <marker id="arrow-warn" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#f3b95f"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" rx="24" fill="url(#bg)"/>
+  <text x="60" y="58" fill="#e8eaf3" font-size="26" font-weight="700">Her ajanın ReAct döngüsü</text>
+  <text x="60" y="84" fill="#949bb3" font-size="14">Düşün → Hareket et → Gözlemle · native tool-calling yerine JSON-schema ile kısıtlı, doğrulanan aksiyonlar</text>
+
+  <circle cx="560" cy="320" r="190" fill="none" stroke="#2a3150" stroke-width="2" stroke-dasharray="4 8"/>
+  <g fill="none" stroke="#8b8ef8" stroke-width="2.5" marker-end="url(#arrow)">
+    <path d="M 640 148 A 190 190 0 0 1 732 240"/>
+    <path d="M 732 400 A 190 190 0 0 1 669 476"/>
+    <path d="M 451 476 A 190 190 0 0 1 388 400"/>
+    <path d="M 388 240 A 190 190 0 0 1 451 164"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="112" width="300" height="96" rx="16" fill="#1b2033" stroke="#2c3350"/>
+  </g>
+  <text x="80" y="140" fill="#e8eaf3" font-size="15" font-weight="700">Görev bağlamı</text>
+  <text x="80" y="162" fill="#949bb3" font-size="12">talep · niyet · kaynaklı kurallar</text>
+  <text x="80" y="180" fill="#949bb3" font-size="12">aday endpoint'ler / tablolar</text>
+  <text x="80" y="198" fill="#949bb3" font-size="12">sürümlü prompt dosyası</text>
+  <line x1="360" y1="136" x2="462" y2="136" stroke="#8b8ef8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="470" y="104" width="180" height="64" rx="16" fill="url(#brand)"/>
+    <rect x="660" y="260" width="200" height="120" rx="16" fill="#1b2033" stroke="#6366f1" stroke-width="2"/>
+    <rect x="470" y="488" width="180" height="70" rx="16" fill="#11303a" stroke="#2f6b73" stroke-width="2"/>
+    <rect x="260" y="260" width="200" height="120" rx="16" fill="#1b2033" stroke="#3a4260" stroke-width="2"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="560" y="130" fill="#fff" font-size="15" font-weight="700">1 · Düşünce</text>
+    <text x="560" y="152" fill="#eef2ff" font-size="12">kısa gerekçe · canlı akar</text>
+
+    <text x="760" y="290" fill="#e8eaf3" font-size="15" font-weight="700">2 · Aksiyon</text>
+    <text x="760" y="312" fill="#c7d2fe" font-size="12">Ollama JSON-schema</text>
+    <text x="760" y="330" fill="#c7d2fe" font-size="12">tool_request · final</text>
+    <text x="760" y="348" fill="#c7d2fe" font-size="12">need_clarification</text>
+    <text x="760" y="366" fill="#949bb3" font-size="11">gemma3:4b · yerel</text>
+
+    <text x="560" y="514" fill="#e8eaf3" font-size="15" font-weight="700">3 · Araç</text>
+    <text x="560" y="534" fill="#9fb8b3" font-size="12">MCP · RAG · OpenAPI</text>
+    <text x="560" y="550" fill="#9fb8b3" font-size="11">doğrulayan dispatcher</text>
+
+    <text x="360" y="290" fill="#e8eaf3" font-size="15" font-weight="700">4 · Gözlem</text>
+    <text x="360" y="312" fill="#949bb3" font-size="12">araç sonucu</text>
+    <text x="360" y="330" fill="#949bb3" font-size="12">kısaltılmış, veri olarak</text>
+    <text x="360" y="348" fill="#949bb3" font-size="12">(talimat olarak değil)</text>
+
+    <text x="560" y="304" fill="#c7cbe0" font-size="13" font-weight="700">Pydantic doğrulama</text>
+    <text x="560" y="324" fill="#949bb3" font-size="11">yalnız izinli araç · fazla alan yok</text>
+    <text x="560" y="342" fill="#949bb3" font-size="11">bozuk çıktıda 1 onarım</text>
+  </g>
+
+  <path d="M 860 300 C 920 300, 920 210, 960 210" fill="none" stroke="#3ddc97" stroke-width="2.5" marker-end="url(#arrow-ok)"/>
+  <path d="M 860 350 C 920 350, 920 430, 960 430" fill="none" stroke="#f3b95f" stroke-width="2.5" marker-end="url(#arrow-warn)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="964" y="150" width="190" height="120" rx="16" fill="#12291f" stroke="#3ddc97" stroke-width="2"/>
+    <rect x="964" y="370" width="190" height="120" rx="16" fill="#33281a" stroke="#f3b95f" stroke-width="2"/>
+  </g>
+  <text x="980" y="178" fill="#3ddc97" font-size="15" font-weight="700">final</text>
+  <text x="980" y="200" fill="#c7e9d6" font-size="12">deterministik kapı:</text>
+  <text x="980" y="218" fill="#c7e9d6" font-size="12">kaynaksız kural, şemada</text>
+  <text x="980" y="236" fill="#c7e9d6" font-size="12">olmayan kolon, uydurma</text>
+  <text x="980" y="254" fill="#c7e9d6" font-size="12">değer reddedilir</text>
+  <text x="980" y="398" fill="#f3b95f" font-size="15" font-weight="700">need_clarification</text>
+  <text x="980" y="420" fill="#f1dfc0" font-size="12">LangGraph interrupt</text>
+  <text x="980" y="438" fill="#f1dfc0" font-size="12">insan yanıtlar / onaylar</text>
+  <text x="980" y="456" fill="#f1dfc0" font-size="12">seçenekler yalnız gerçek</text>
+  <text x="980" y="474" fill="#f1dfc0" font-size="12">kaynaklardan</text>
+
+  <rect x="60" y="410" width="200" height="146" rx="16" fill="#151a2b" stroke="#2a3150"/>
+  <text x="80" y="438" fill="#c7cbe0" font-size="13" font-weight="700" letter-spacing="1">KORKULUKLAR</text>
+  <text x="80" y="462" fill="#949bb3" font-size="12">ajan başına ≤ 6 adım</text>
+  <text x="80" y="482" fill="#949bb3" font-size="12">çalışma başına ≤ 24 çağrı</text>
+  <text x="80" y="502" fill="#949bb3" font-size="12">çağrı başına süre sınırı</text>
+  <text x="80" y="522" fill="#949bb3" font-size="12">iç düşünce saklanmaz</text>
+  <text x="80" y="542" fill="#949bb3" font-size="12">seçenek uydurulamaz</text>
+</svg>

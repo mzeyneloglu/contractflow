@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="ContractFlow mimarisi">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f1220"/>
+      <stop offset="1" stop-color="#121a2a"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c7ff7"/>
+      <stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="tool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11303a"/>
+      <stop offset="1" stop-color="#0e2730"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8b93b8"/>
+    </marker>
+    <marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#2dd4bf"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="900" rx="24" fill="url(#bg)"/>
+
+  <text x="60" y="58" fill="#e8eaf3" font-size="26" font-weight="700">ContractFlow mimarisi</text>
+  <text x="60" y="84" fill="#949bb3" font-size="14">LLM ajanları araştırır ve önerir · deterministik çekirdek doğrular ve hükmü verir · her şey yerel çalışır</text>
+
+  <g filter="url(#shadow)">
+    <rect x="300" y="108" width="600" height="52" rx="26" fill="#1b2033" stroke="#2c3350"/>
+  </g>
+  <circle cx="330" cy="134" r="9" fill="url(#brand)"/>
+  <text x="350" y="139" fill="#e8eaf3" font-size="15" font-weight="600">Kullanıcı · Türkçe tek sayfa arayüz</text>
+  <text x="640" y="139" fill="#949bb3" font-size="13">doğal dil talep · canlı SSE akışı · onay</text>
+  <line x1="600" y1="160" x2="600" y2="186" stroke="#8b93b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="60" y="190" width="1080" height="58" rx="16" fill="url(#brand)" opacity="0.95"/>
+  </g>
+  <text x="84" y="216" fill="#fff" font-size="16" font-weight="700">LangGraph orkestratörü</text>
+  <text x="84" y="236" fill="#eef2ff" font-size="13">durum makinesi · koşullu kenarlar · SQLite checkpoint · interrupt / resume (insan onayı) · iptal · kaldığı yerden devam</text>
+
+  <rect x="60" y="268" width="1080" height="200" rx="18" fill="#151a2b" stroke="#2a3150"/>
+  <text x="84" y="294" fill="#c7cbe0" font-size="13" font-weight="700" letter-spacing="1">LLM AJANLARI · ReAct (structured action)</text>
+  <g>
+    <rect x="782" y="279" width="340" height="24" rx="12" fill="#0b0d16" stroke="#2a3150"/>
+    <circle cx="798" cy="291" r="5" fill="#f5f5f5"/>
+    <text x="810" y="296" fill="#c7cbe0" font-size="12">Yerel Ollama · gemma3:4b karar · qwen3-embedding RAG</text>
+  </g>
+
+  <g font-size="14" text-anchor="middle">
+    <g filter="url(#shadow)">
+      <circle cx="180" cy="362" r="42" fill="url(#head)"/>
+      <circle cx="390" cy="362" r="42" fill="url(#head)"/>
+      <circle cx="600" cy="362" r="42" fill="url(#head)"/>
+      <circle cx="810" cy="362" r="42" fill="url(#head)"/>
+      <circle cx="1020" cy="362" r="42" fill="url(#head)"/>
+    </g>
+    <g stroke="#fff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="180" cy="362" r="16"/>
+      <path d="M180 350l5 12-5 12-5-12z" fill="#fff"/>
+      <path d="M372 350h14v24h-14zM394 350h14v24h-14z"/>
+      <path d="M379 356h3M379 362h3M401 356h3M401 362h3"/>
+      <path d="M592 348c-6 0-6 6-6 9s-3 5-6 5c3 0 6 2 6 5s0 9 6 9M608 348c6 0 6 6 6 9s3 5 6 5c-3 0-6 2-6 5s0 9-6 9"/>
+      <ellipse cx="810" cy="351" rx="14" ry="5"/>
+      <path d="M796 351v22c0 3 6 5 14 5s14-2 14-5v-22M796 362c0 3 6 5 14 5s14-2 14-5"/>
+      <path d="M1008 376v-10M1018 376v-20M1028 376v-14M1003 376h30"/>
+    </g>
+    <text x="180" y="426" fill="#e8eaf3" font-weight="700">Planlama</text>
+    <text x="180" y="446" fill="#949bb3" font-size="12">talebi sınıflandırır, niyeti çıkarır</text>
+    <text x="390" y="426" fill="#e8eaf3" font-weight="700">İş Kuralı</text>
+    <text x="390" y="446" fill="#949bb3" font-size="12">belgelerde kural ve istisna arar</text>
+    <text x="600" y="426" fill="#e8eaf3" font-weight="700">API</text>
+    <text x="600" y="446" fill="#949bb3" font-size="12">endpoint ve parametreleri seçer</text>
+    <text x="810" y="426" fill="#e8eaf3" font-weight="700">Oracle</text>
+    <text x="810" y="446" fill="#949bb3" font-size="12">bağımsız iş kuralı sorgusu kurar</text>
+    <text x="1020" y="426" fill="#e8eaf3" font-weight="700">Sonuç Analizi</text>
+    <text x="1020" y="446" fill="#949bb3" font-size="12">kanıtlı özet, etiketli hipotez</text>
+  </g>
+  <g stroke="#5b6386" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="226" y1="362" x2="342" y2="362"/>
+    <line x1="436" y1="362" x2="552" y2="362"/>
+    <line x1="646" y1="362" x2="762" y2="362"/>
+    <line x1="856" y1="362" x2="972" y2="362"/>
+  </g>
+
+  <g stroke="#2dd4bf" stroke-width="2" stroke-dasharray="5 5" fill="none" marker-end="url(#arrow-teal)">
+    <path d="M390 452 C 390 600, 390 600, 390 614"/>
+    <path d="M600 452 C 600 600, 600 600, 600 614"/>
+    <path d="M810 452 C 810 600, 810 600, 810 614"/>
+  </g>
+  <rect x="60" y="488" width="1080" height="96" rx="18" fill="#141a24" stroke="#24433f"/>
+  <text x="84" y="514" fill="#5eead4" font-size="13" font-weight="700" letter-spacing="1">DETERMİNİSTİK ÇEKİRDEK · hüküm kodda</text>
+  <g font-size="13" text-anchor="middle" fill="#e8eaf3">
+    <rect x="90" y="528" width="180" height="42" rx="12" fill="#1c2a2c" stroke="#2f5b55"/>
+    <text x="180" y="548" font-weight="600">Kod analizi</text>
+    <text x="180" y="563" fill="#9fb8b3" font-size="11">endpoint → servis → SQL</text>
+    <rect x="300" y="528" width="180" height="42" rx="12" fill="#1c2a2c" stroke="#2f5b55"/>
+    <text x="390" y="548" font-weight="600">Grounding · plan kapısı</text>
+    <text x="390" y="563" fill="#9fb8b3" font-size="11">kaynaksız değer reddedilir</text>
+    <rect x="510" y="528" width="180" height="42" rx="12" fill="#1c2a2c" stroke="#2f5b55"/>
+    <text x="600" y="548" font-weight="600">İnsan onayı</text>
+    <text x="600" y="563" fill="#9fb8b3" font-size="11">(A) ve (B) SQL yan yana</text>
+    <rect x="720" y="528" width="180" height="42" rx="12" fill="#1c2a2c" stroke="#2f5b55"/>
+    <text x="810" y="548" font-weight="600">Paralel yürütme</text>
+    <text x="810" y="563" fill="#9fb8b3" font-size="11">API · (A) · (B) idempotent</text>
+    <rect x="930" y="528" width="180" height="42" rx="12" fill="#1c2a2c" stroke="#2f5b55"/>
+    <text x="1020" y="548" font-weight="600">Üçlü karşılaştırma</text>
+    <text x="1020" y="563" fill="#9fb8b3" font-size="11">5 assertion · teşhis · rapor</text>
+  </g>
+
+
+  <text x="60" y="608" fill="#c7cbe0" font-size="13" font-weight="700" letter-spacing="1">ARAÇLAR VE PROTOKOLLER</text>
+  <g font-size="13" text-anchor="middle">
+    <g filter="url(#shadow)">
+      <rect x="80" y="618" width="200" height="70" rx="14" fill="url(#tool)" stroke="#2f6b73"/>
+      <rect x="290" y="618" width="200" height="70" rx="14" fill="url(#tool)" stroke="#2f6b73"/>
+      <rect x="500" y="618" width="200" height="70" rx="14" fill="url(#tool)" stroke="#2f6b73"/>
+      <rect x="710" y="618" width="200" height="70" rx="14" fill="url(#tool)" stroke="#6366f1" stroke-width="2"/>
+      <rect x="920" y="618" width="200" height="70" rx="14" fill="url(#tool)" stroke="#2f6b73"/>
+    </g>
+    <text x="180" y="645" fill="#e8eaf3" font-weight="700">HTTP executor</text>
+    <text x="180" y="664" fill="#9fb8b3" font-size="11">tüm sayfalar · benzersiz ID</text>
+    <text x="180" y="679" fill="#9fb8b3" font-size="11">traceparent · maskeli curl</text>
+    <text x="390" y="645" fill="#e8eaf3" font-weight="700">RAG</text>
+    <text x="390" y="664" fill="#9fb8b3" font-size="11">Chroma + BM25 + RRF</text>
+    <text x="390" y="679" fill="#9fb8b3" font-size="11">dosya · bölüm · sayfa kaynağı</text>
+    <text x="600" y="645" fill="#e8eaf3" font-weight="700">OpenAPI kataloğu</text>
+    <text x="600" y="664" fill="#9fb8b3" font-size="11">Swagger 2.0 · OAS 3.0 / 3.1</text>
+    <text x="600" y="679" fill="#9fb8b3" font-size="11">Spring Page zarfı algılama</text>
+    <text x="810" y="645" fill="#e8eaf3" font-weight="700">oracle_mcp · MCP stdio</text>
+    <text x="810" y="664" fill="#c7d2fe" font-size="11">SELECT-only AST politikası</text>
+    <text x="810" y="679" fill="#c7d2fe" font-size="11">şema keşfi · bind · read-only</text>
+    <text x="1020" y="645" fill="#e8eaf3" font-weight="700">Servis SQL izi</text>
+    <text x="1020" y="664" fill="#9fb8b3" font-size="11">V$SQL · OpenTelemetry</text>
+    <text x="1020" y="679" fill="#9fb8b3" font-size="11">korelasyonlu log · kod</text>
+  </g>
+
+  <g stroke="#5b6386" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="180" y1="688" x2="180" y2="752"/>
+    <line x1="390" y1="688" x2="390" y2="752"/>
+    <line x1="600" y1="688" x2="600" y2="752"/>
+    <line x1="810" y1="688" x2="810" y2="752"/>
+    <line x1="1020" y1="688" x2="1020" y2="752"/>
+  </g>
+
+  <text x="198" y="742" fill="#c7cbe0" font-size="13" font-weight="700" letter-spacing="1">HEDEF SİSTEMLER</text>
+  <g font-size="13" text-anchor="middle">
+    <rect x="80" y="756" width="200" height="88" rx="14" fill="#1a2c1c" stroke="#3f7d46"/>
+    <text x="180" y="784" fill="#e8f5e9" font-weight="700">Spring Boot servisi</text>
+    <text x="180" y="803" fill="#a5d6a7" font-size="11">REST · Spring MVC</text>
+    <text x="180" y="818" fill="#a5d6a7" font-size="11">Spring Data JPA · MyBatis</text>
+    <text x="180" y="833" fill="#a5d6a7" font-size="11">(C) gerçek API çıktısı</text>
+    <rect x="290" y="756" width="200" height="88" rx="14" fill="#1b1f2e" stroke="#3a4260"/>
+    <text x="390" y="784" fill="#e8eaf3" font-weight="700">Analist belgeleri</text>
+    <text x="390" y="803" fill="#949bb3" font-size="11">PDF · Markdown</text>
+    <text x="390" y="818" fill="#949bb3" font-size="11">iş kuralları · istisnalar</text>
+    <rect x="500" y="756" width="200" height="88" rx="14" fill="#1b1f2e" stroke="#3a4260"/>
+    <text x="600" y="784" fill="#e8eaf3" font-weight="700">Swagger / OpenAPI</text>
+    <text x="600" y="803" fill="#949bb3" font-size="11">/v3/api-docs</text>
+    <text x="600" y="818" fill="#949bb3" font-size="11">operasyonlar · header'lar</text>
+    <rect x="710" y="756" width="200" height="88" rx="14" fill="#2c1a1a" stroke="#8a3b3b"/>
+    <text x="810" y="784" fill="#fde8e8" font-weight="700">Oracle veritabanı</text>
+    <text x="810" y="803" fill="#f1b0b0" font-size="11">on-prem · Thin mode</text>
+    <text x="810" y="818" fill="#f1b0b0" font-size="11">(A) iş kuralı sorgusu</text>
+    <text x="810" y="833" fill="#f1b0b0" font-size="11">V$SQL · metadata</text>
+    <rect x="920" y="756" width="200" height="88" rx="14" fill="#2c2416" stroke="#8a6a2e"/>
+    <text x="1020" y="784" fill="#fff4de" font-weight="700">Java kaynak kodu</text>
+    <text x="1020" y="803" fill="#f3d39b" font-size="11">Controller → Service</text>
+    <text x="1020" y="818" fill="#f3d39b" font-size="11">→ Repository → SQL</text>
+    <text x="1020" y="833" fill="#f3d39b" font-size="11">(B) servisin kendi sorgusu</text>
+  </g>
+
+  <text x="600" y="878" fill="#6b7393" font-size="12" text-anchor="middle">Gizli bilgiler işletim sistemi anahtar deposunda · modele, loglara ve Git'e gönderilmez · uygulama yalnızca 127.0.0.1'e bağlanır</text>
+</svg>
